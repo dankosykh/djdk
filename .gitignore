@@ -1,0 +1,3 @@
+node_modules
+client/dist/images
+client/dist/bundle.js
