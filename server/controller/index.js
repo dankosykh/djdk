@@ -2,7 +2,7 @@
 const { transporter, mailOptions } = require('../../nodemailer.config');
 
 const sendEmail = (req, res, next) => {
-  { name, email, body, subject } = req.body;
+  let { name, email, body, subject } = req.body;
   console.log(req.body);
   // transporter.sendMail(mailOptions, function(error, info){
   //   if (error) {

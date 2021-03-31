@@ -1,4 +1,5 @@
 .head {
+  grid-row: 1;
   border: red solid 2px;
   height: 175px;
   background-color: #fefefe;

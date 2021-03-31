@@ -4,7 +4,7 @@ import styles from './Footer.css';
 const Footer = () => {
 
   return (
-    <footer>
+    <footer className={styles.footer}>
       <div className={styles.iconContainer}>
         <ul>
 

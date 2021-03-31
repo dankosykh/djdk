@@ -1,0 +1,20 @@
+.contactContainer {
+  /* display: grid; */
+  /* position: absolute; */
+  z-index: 2;
+  background-color: rgba(173, 216, 230, .95);
+  grid-area: 1 / 2 / 4 / 2;
+  /* grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr; */
+}
+
+
+
+
+/* Phone styles above  */
+@media screen and (min-width: 600px) {
+  .contactContainer {
+    z-index: 2;
+    grid-area: 2 / 2;
+  }
+}
