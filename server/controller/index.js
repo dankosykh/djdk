@@ -11,3 +11,5 @@ const sendEmail = (req, res, next) => {
   //     console.log('Email sent: ' + info.response);
   //   }
 }
+
+module.exports = { sendEmail }
