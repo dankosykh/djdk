@@ -1,25 +1,56 @@
 .head {
   grid-row: 1;
-  border: red solid 2px;
-  height: 175px;
-  background-color: #fefefe;
-  font-family: 'Share', italic;
-  display: flex;
+  height: 200px;
+  background-color: #EEF0F2;
+  font-family: 'Train One', cursive;
+  /* font-family: 'Monoton', cursive; */
   justify-content: space-between;
+  display: grid;
+  grid-template-columns: 65% 5% 25%;
+  grid-template-areas:
+    "title . buttons";
 }
 
 .title {
+  height: 100%;
+  width: 100%;
+  grid: title;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
+.title h1 {
+  padding: 0;
   font-weight: 700;
-  font-size: 150px;
+  font-size: 125px;
+  color: #141414;
 }
 
 .menu {
-  border: 3px solid green;
+  grid-column: buttons;
+  display: flex;
+  /* border: 3px solid green; */
+  background-color: #FF8C42;
+  color: #141414;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-button {
+.menu button {
   background: transparent;
-  color: black;
+  border: none;
+  color: #fefefe;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: .1em;
+}
+
+@media screen and (min-width: 78em) {
+  .menu {
+    grid-column: buttons;
+    display: flex;
+  }
 }

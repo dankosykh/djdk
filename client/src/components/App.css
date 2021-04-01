@@ -12,7 +12,6 @@
   display: grid;
   grid-template-rows: 1fr 8fr 1fr;
   grid-template-columns: 1fr 2fr 1fr;
-  border: palegreen 5px solid;
 }
 
 .backgroundImage {
@@ -32,11 +31,8 @@
     height: auto;
     min-width: 750px;
     max-height: 1300px;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
   }
+
+  /* color: #8f830e */
 }
 

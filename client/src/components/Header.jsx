@@ -1,5 +1,4 @@
 import React from 'react';
-// import HeaderStyled from './HeaderStyles.js';
 import styles from './Header.css';
 
 const Header = ({setDisplay}) => {
@@ -24,7 +23,9 @@ const Header = ({setDisplay}) => {
 
   return (
     <div className={styles.head}>
-      <div className={styles.title}>Dj DK</div>
+      <div className={styles.title}>
+        <h1>Dj DK</h1>
+      </div>
       <div className={styles.menu}>
         {menuItems.map((menuItem, i) => <ButtonBuilder key={i} menuItem={menuItem}/>)}
       </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { postEmail } from '../http/http.js';
+import moduleStyles from './_modules.css';
 import styles from './Contact.css';
 
 const Contact = () => {
@@ -74,7 +75,7 @@ const Contact = () => {
   }
 
   return (
-    <div className={styles.contactContainer}>
+    <div className={moduleStyles.moduleContainer}>
       {!sent
         ? formFields()
         : postSuccess ? ifSuccess(true) : ifSuccess(false)

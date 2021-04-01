@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import GlobalStyle from './GlobalStyles.js';
+import styles from './App.css';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
-import HomePage from './main/HomePage.jsx';
-import TrackOfTheDay from './main/TrackOfTheDay.jsx';
-import Contact from './main/Contact.jsx';
+import HomePage from './modules/HomePage.jsx';
+import TrackOfTheDay from './modules/TrackOfTheDay.jsx';
+import Mixes from './modules/Mixes.jsx';
+import Bio from './modules/Bio.jsx';
+import Contact from './modules/Contact.jsx';
 import backgroundImage from './img/background.jpg';
-import styles from './App.css';
 
 const App = () => {
   const [ display, setDisplay ] = useState('contact');
@@ -23,6 +25,8 @@ const App = () => {
               <Route exact path='/trackoftheday' component={TrackOfTheDay} /> */}
               {display === 'home' && <HomePage />}
               {display === 'dkstrackoftheday' && <TrackOfTheDay />}
+              {display === 'mixes' && <Mixes />}
+              {display === 'bio' && <Bio />}
               {display === 'contact' && <Contact />}
             {/* </Switch> */}
           </div>
