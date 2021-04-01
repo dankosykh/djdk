@@ -76,10 +76,12 @@ const Contact = () => {
 
   return (
     <div className={moduleStyles.moduleContainer}>
-      {!sent
-        ? formFields()
-        : postSuccess ? ifSuccess(true) : ifSuccess(false)
-      }
+      <div className={styles.contactContainer}>
+        {!sent
+          ? formFields()
+          : postSuccess ? ifSuccess(true) : ifSuccess(false)
+        }
+      </div>
     </div>
   )
 }

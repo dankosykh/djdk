@@ -9,6 +9,7 @@ import TrackOfTheDay from './modules/TrackOfTheDay.jsx';
 import Mixes from './modules/Mixes.jsx';
 import Bio from './modules/Bio.jsx';
 import Contact from './modules/Contact.jsx';
+import AddToDB from './modules/AddToDB.jsx';
 import backgroundImage from './img/background.jpg';
 
 const App = () => {
@@ -33,6 +34,7 @@ const App = () => {
           <Footer />
         <GlobalStyle />
       {/* </BrowserRouter> */}
+      {/* <AddToDB /> */}
         </div>
     )
 }
