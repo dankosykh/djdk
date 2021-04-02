@@ -1,15 +1,24 @@
 .contactContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  /* display: grid; */
-
-
-  /* grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr; */
+.contactContainer form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
 .contactContainer input, .contactContainer textarea {
   border: none;
   font-family: sans-serif, Arial, Helvetica;
+  padding-left: 15px;
+  padding: 10px 0;
+  margin: 15px 0;
+  width: 100%;
 }
 
 /* .contactContainer textarea {
@@ -21,7 +30,6 @@
 /* Phone styles above  */
 @media screen and (min-width: 600px) {
   .contactContainer {
-    z-index: 2;
-    /* grid-area: 2 / 2; */
+
   }
 }
