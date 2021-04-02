@@ -22,13 +22,13 @@ const Header = ({setDisplay}) => {
   }
 
   return (
-    <div className={styles.head}>
+    <div className={styles.header}>
       <div className={styles.title}>
         <h1>Dj DK</h1>
       </div>
-      <div className={styles.menu}>
+      {/* <div className={styles.menu}>
         {menuItems.map((menuItem, i) => <ButtonBuilder key={i} menuItem={menuItem}/>)}
-      </div>
+      </div> */}
     </div>
   )
 }

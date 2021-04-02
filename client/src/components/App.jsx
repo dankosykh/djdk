@@ -19,17 +19,23 @@ const App = () => {
       // <BrowserRouter>
         <div className={styles.appContent}>
           <Header setDisplay={setDisplay}/>
-            <img className={styles.backgroundImage} src={backgroundImage}/>
-          <div className={styles.contentContainer}>
-            {/* <Switch> */}
-              {/* <Route exact path='/' component={HomePage} />
-              <Route exact path='/trackoftheday' component={TrackOfTheDay} /> */}
-              {display === 'home' && <HomePage />}
-              {display === 'dkstrackoftheday' && <TrackOfTheDay />}
-              {display === 'mixes' && <Mixes />}
-              {display === 'bio' && <Bio />}
-              {display === 'contact' && <Contact />}
-            {/* </Switch> */}
+          <div className={styles.spacer}>
+            <div className={styles.contentImageContainer}>
+              <div className={styles.imgContainer}>
+                <img className={styles.backgroundImage} src={backgroundImage}/>
+              </div>
+              {/* <Switch> */}
+                {/* <Route exact path='/' component={HomePage} />
+                <Route exact path='/trackoftheday' component={TrackOfTheDay} /> */}
+              <div className={styles.contentContainer}>
+                {display === 'home' && <HomePage />}
+                {display === 'dkstrackoftheday' && <TrackOfTheDay />}
+                {display === 'mixes' && <Mixes />}
+                {display === 'bio' && <Bio />}
+                {display === 'contact' && <Contact />}
+              </div>
+              {/* </Switch> */}
+            </div>
           </div>
           <Footer />
         <GlobalStyle />

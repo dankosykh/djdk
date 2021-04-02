@@ -1,18 +1,20 @@
 .moduleContainer {
-  z-index: 2;
-  background-color: #EEF0F2f2;
+  /* z-index: 2; */
+  background-color: #eef0f2cc;
   color: #141414;
   font-family: 'Oswald', sans-serif;
   border-radius: 3px;
-  grid-area: 1 / 2 / 4 / 2;
+  /* grid-area: 1 / 2; */
 }
 
-
-
 /* Phone styles above  */
+
+
 @media screen and (min-width: 600px) {
   .moduleContainer {
-    z-index: 2;
-    grid-area: 2 / 2;
+    /* z-index: 2;
+    grid-area: 2 / 2 / 3 / 3; */
+    height: 100%;
+    background-color: #EEF0F2f2;
   }
 }

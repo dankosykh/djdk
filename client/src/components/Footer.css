@@ -1,15 +1,21 @@
 .footer {
   width: 100%;
-  background-color: #EEF0F2;
+  min-height: 150px;
   color: #141414;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  grid-row: 3;
 }
 
 .iconContainer {
   display: flex;
   list-style-type: none;
+}
+
+@media screen and (min-width: 600px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+  }
 }

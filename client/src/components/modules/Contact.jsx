@@ -49,7 +49,7 @@ const Contact = () => {
   const formFields = () => {
     return (
     <>
-      <h2>Reach out below!</h2>
+      <h2>CONTACT ME BELOW</h2>
       <form onSubmit={handleSubmit}>
         {textBoxBuilder('text', 'name', setName, 'Name', true)}
         {textBoxBuilder('email', 'email', setEmail, 'Email', true)}
