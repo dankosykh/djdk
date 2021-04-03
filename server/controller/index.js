@@ -15,9 +15,9 @@ const sendEmail = (req, res, next) => {
       console.log(error);
     } else {
       addToEmailHistory({ name, email, phone, subject, body }, (err, response) => {
-        if (err) res.send(422);
+        if (err) res.sendStatus(422);
         console.log('Written to DB');
-        res.semd(201)
+        res.sendStatus(201)
       });
     }
   });
@@ -25,15 +25,22 @@ const sendEmail = (req, res, next) => {
 
 const sendToDB = (req, res, next) => {
   addNewTrack(req.body, (err, response) => {
-    if (err) res.send(422);
-    console.log('Written to DB');
-    res.send(201);
+    if (err) {
+      console.log(err);
+      res.sendStatus(422);
+    } else {
+      console.log(response);
+
+      res.send(201);
+      console.log('Written to DB');
+    }
   })
 }
 
 const getTrackFromDB = (req, res, next) => {
   getTrackOfTheDay((err, response) => {
-    if (err) res.send(404);
+    if (err) res.sendStatus(404);
+    console.log(response)
     res.send(response);
   });
 }

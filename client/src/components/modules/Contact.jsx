@@ -49,7 +49,7 @@ const Contact = () => {
   const formFields = () => {
     return (
     <>
-      <h2>CONTACT ME BELOW</h2>
+      <h1>CONTACT ME BELOW</h1>
       <form onSubmit={handleSubmit}>
         {textBoxBuilder('text', 'name', setName, 'Name', true)}
         {textBoxBuilder('email', 'email', setEmail, 'Email', true)}
@@ -58,11 +58,11 @@ const Contact = () => {
         <textarea
           type='text'
           maxLength='1500'
-          placeholder='Hi, how are you?'
+          placeholder='Hi, how can I help you?'
           onChange={e => setBody(e.target.value)}
           required
         ></textarea>
-        <button>Send</button>
+        <button>SEND</button>
       </form>
     </>
     )

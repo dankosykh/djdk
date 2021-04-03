@@ -10,17 +10,19 @@ import Mixes from './modules/Mixes.jsx';
 import Bio from './modules/Bio.jsx';
 import Contact from './modules/Contact.jsx';
 import AddToDB from './modules/AddToDB.jsx';
+import Menu from './modules/Menu.jsx';
 import backgroundImage from './img/background.jpg';
 
 const App = () => {
-  const [ display, setDisplay ] = useState('contact');
+  const [ display, setDisplay ] = useState('dkstrackoftheday');
 
     return (
       // <BrowserRouter>
         <div className={styles.appContent}>
-          <Header setDisplay={setDisplay}/>
+          <Header />
           <div className={styles.spacer}>
             <div className={styles.contentImageContainer}>
+              <Menu setDisplay={setDisplay} />
               <div className={styles.imgContainer}>
                 <img className={styles.backgroundImage} src={backgroundImage}/>
               </div>

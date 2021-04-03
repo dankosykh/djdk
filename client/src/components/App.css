@@ -51,6 +51,7 @@
 
   .imgContainer {
     max-height: 900px;
+    height: 100%;
     width: 100%;
     z-index: 0;
     position: absolute;
@@ -64,7 +65,7 @@
 
   .contentContainer {
     display: grid;
-    width: 100%;
+    min-width: 500px;
     height: 100%;
     z-index: 1;
     grid-row: 2 / 3;
@@ -73,12 +74,12 @@
 
 @media screen and (min-width: 800px) {
   .contentImageContainer {
-    margin-bottom: 100px;
+    min-height: 700px;
   }
 }
 
 @media screen and (min-width: 900px) {
   .contentImageContainer {
-    margin-bottom: 340px;
+    min-height: 800px;
   }
 }

@@ -1,0 +1,20 @@
+.menu {
+  z-index: 2;
+  grid-template-rows: 1;
+  display: flex;
+  background-color: #FF8C42;
+  color: #141414;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.menu button {
+  background: transparent;
+  border: none;
+  color: #fefefe;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: .1em;
+}

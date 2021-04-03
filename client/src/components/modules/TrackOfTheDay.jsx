@@ -12,6 +12,7 @@ const TrackOfTheDay = () => {
     getTrackOfTheDay()
       .then(res => {
         let { embedBig, embedMini, name, artist, genre, forDate, description } = res;
+        console.log(res)
         setTrack({ embedBig, embedMini, name, artist, genre, forDate, description })})
   }, []);
 
@@ -29,10 +30,10 @@ const TrackOfTheDay = () => {
         <div className={styles.iframeContainer}>
           {trackInfo.embedBig && parse(trackInfo.embedBig)}
         </div>
-        <div>
-          {trackInfo.name && <h1>{trackInfo.name}</h1>}
-          {trackInfo.artist && <h2>{trackInfo.artist}</h2>}
-          {trackInfo.genre && <h4>{trackInfo.genre}</h4>}
+        <div className={styles.trackInfo}>
+          {trackInfo.name && <h2>{trackInfo.name}</h2>}
+          {trackInfo.artist && <h3>{trackInfo.artist}</h3>}
+          {trackInfo.genre && <h5>{trackInfo.genre}</h5>}
           {trackInfo.description && <h5>{trackInfo.description}</h5>}
         </div>
         <div>

@@ -13,8 +13,10 @@ const addNewTrack = (params, callback) => {
 
 // get from DB ___________________________________
 const getTrackOfTheDay = (callback) => {
+  let today = new Date().toJSON().slice(0,10);
+  console.log(today)
   TrackOfTheDay
-    .findOne({forDate: new Date().toJSON().slice(0,10)})
+    .findOne({forDate: today})
     .exec(callback);
 }
 
