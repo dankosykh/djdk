@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
 }
 
 .imgContainer {
@@ -42,10 +43,13 @@
 
   .contentImageContainer {
     display: grid;
+    width: 100%;
+    border: lightgreen 3px solid;
     min-height: 600px;
-    position: relative;
+    /* position: relative; */
     margin-bottom: 0px;
     grid-template-rows: 1fr 5fr 1fr;
+    grid-template-columns: 20% 50% auto;
     align-items: flex-start;
   }
 

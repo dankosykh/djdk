@@ -9,7 +9,7 @@
   justify-content: space-around;
 }
 
-.menu button {
+.menuButton, .selected {
   background: transparent;
   border: none;
   color: #fefefe;
@@ -17,4 +17,33 @@
   font-size: 20px;
   font-family: "Oswald", sans-serif;
   letter-spacing: .1em;
+}
+
+.menuButton:focus, .selected:focus {
+  outline: none;
+}
+
+.menuButton:hover {
+  background: #ffb07f;
+  transition-duration: .2s;
+}
+
+.selected {
+  background-color: #ff6200;
+}
+
+.menuButton:active {
+  outline: none;
+  transform: scale(.95);
+  transition-duration: .1s;
+  border-left: 1px solid #c8c8c8;
+  border-right: 1px solid #c8c8c8;
+}
+
+
+@media screen and (min-width: 600px) {
+  .menu{
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
 }

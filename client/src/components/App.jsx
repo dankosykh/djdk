@@ -11,10 +11,19 @@ import Bio from './modules/Bio.jsx';
 import Contact from './modules/Contact.jsx';
 import AddToDB from './modules/AddToDB.jsx';
 import Menu from './modules/Menu.jsx';
-import backgroundImage from './img/background.jpg';
+import bgInit from './img/background.jpg';
+import controller from './img/controller.png';
+import self from './img/self.png';
+
+const changeImage = () => {
+
+}
 
 const App = () => {
   const [ display, setDisplay ] = useState('dkstrackoftheday');
+  const [ bg, setBg ] = useState(bgInit)
+
+  useEffect()
 
     return (
       // <BrowserRouter>
@@ -22,9 +31,9 @@ const App = () => {
           <Header />
           <div className={styles.spacer}>
             <div className={styles.contentImageContainer}>
-              <Menu setDisplay={setDisplay} />
+              <Menu display={display} setDisplay={setDisplay} />
               <div className={styles.imgContainer}>
-                <img className={styles.backgroundImage} src={backgroundImage}/>
+                <img className={styles.backgroundImage} src={bg}/>
               </div>
               {/* <Switch> */}
                 {/* <Route exact path='/' component={HomePage} />

@@ -35,7 +35,7 @@
   background-color: #c8c8c8;
 }
 
-.contactContainer input, .contactContainer textarea:focus {
+.contactContainer input:focus, .contactContainer textarea:focus {
   outline: #FF8C42;
 }
 
