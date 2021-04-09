@@ -1,5 +1,5 @@
 const express = require('express');
-const { sendEmail, sendToDB, getTrackFromDB } = require('./controller');
+const { sendEmail, sendToDB, getTrackFromDB, getPastTracksFromDB } = require('./controller');
 const app = express();
 
 
@@ -10,6 +10,7 @@ app.use(express.json());
 
 app.get('/', () => console.log('hit home'))
 app.get('/trackoftheday', getTrackFromDB);
+app.get('/pasttracks', getPastTracksFromDB);
 
 app.post('/contact', sendEmail);
 app.post('/trackoftheday', sendToDB);

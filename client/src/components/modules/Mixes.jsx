@@ -5,7 +5,7 @@ import styles from './Mixes.css';
 const Mixes = () => {
   return(
     <div className={moduleStyles.moduleContainer}>
-      <h2>What's your Vibe?</h2>
+      <h2>MIXES</h2>
     </div>
   )
 }

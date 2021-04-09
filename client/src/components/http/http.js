@@ -16,6 +16,14 @@ const getTrackOfTheDay = () => {
   });
 };
 
+const getPastTracksOfTheDay = () => {
+  return new Promise((resolve, reject) => {
+    axios.get('/pasttracks')
+      .then(res => resolve(res.data))
+      .catch(e => resolve(e));
+  });
+};
+
 const addTrackOfTheDay = ( params ) => {
   return new Promise((resolve, reject) => {
     axios.post('/trackoftheday', params)
@@ -24,4 +32,4 @@ const addTrackOfTheDay = ( params ) => {
   });
 };
 
-export { postEmail, getTrackOfTheDay, addTrackOfTheDay }
+export { postEmail, getTrackOfTheDay, addTrackOfTheDay, getPastTracksOfTheDay }

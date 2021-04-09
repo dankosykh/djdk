@@ -1,6 +1,6 @@
 // const nodemailer = require('nodemailer');
 const { transporter, mailOptions } = require('../../nodemailer.config');
-const { addToEmailHistory, addNewTrack, getTrackOfTheDay } = require('../../db/controller');
+const { addToEmailHistory, addNewTrack, getTrackOfTheDay, getPastTracks } = require('../../db/controller');
 
 const sendEmail = (req, res, next) => {
   let { name, email, phone, subject, body } = req.body;
@@ -40,9 +40,16 @@ const sendToDB = (req, res, next) => {
 const getTrackFromDB = (req, res, next) => {
   getTrackOfTheDay((err, response) => {
     if (err) res.sendStatus(404);
+    res.send(response);
+  });
+}
+
+const getPastTracksFromDB = (req, res, next) => {
+  getPastTracks((err, response) => {
+    if (err) res.sendStatus(404);
     console.log(response)
     res.send(response);
   });
 }
 
-module.exports = { sendEmail, sendToDB, getTrackFromDB }
+module.exports = { sendEmail, sendToDB, getTrackFromDB, getPastTracksFromDB }

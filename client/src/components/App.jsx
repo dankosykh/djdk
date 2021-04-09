@@ -20,10 +20,9 @@ const changeImage = () => {
 }
 
 const App = () => {
-  const [ display, setDisplay ] = useState('dkstrackoftheday');
+  const [ display, setDisplay ] = useState('home');
   const [ bg, setBg ] = useState(bgInit)
 
-  useEffect()
 
     return (
       // <BrowserRouter>

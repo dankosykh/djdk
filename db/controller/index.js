@@ -14,10 +14,16 @@ const addNewTrack = (params, callback) => {
 // get from DB ___________________________________
 const getTrackOfTheDay = (callback) => {
   let today = new Date().toJSON().slice(0,10);
-  console.log(today)
   TrackOfTheDay
     .findOne({forDate: today})
     .exec(callback);
 }
 
-module.exports = { addToEmailHistory, addNewTrack, getTrackOfTheDay };
+const getPastTracks = (callback) => {
+  let today = new Date().toJSON().slice(0,10);
+  TrackOfTheDay
+    .find({ forDate: { $ne: today }})
+    .exec(callback);
+}
+
+module.exports = { addToEmailHistory, addNewTrack, getTrackOfTheDay, getPastTracks };

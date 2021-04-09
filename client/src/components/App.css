@@ -44,12 +44,12 @@
   .contentImageContainer {
     display: grid;
     width: 100%;
-    border: lightgreen 3px solid;
+    /* border: lightgreen 3px solid; */
     min-height: 600px;
     /* position: relative; */
     margin-bottom: 0px;
     grid-template-rows: 1fr 5fr 1fr;
-    grid-template-columns: 20% 50% auto;
+    grid-template-columns: 25% 60% 15%;
     align-items: flex-start;
   }
 
@@ -73,6 +73,7 @@
     height: 100%;
     z-index: 1;
     grid-row: 2 / 3;
+    grid-column: 2 / 3;
   }
 }
 

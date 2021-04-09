@@ -31,6 +31,6 @@
   .moduleContainer {
     background-color: #EEF0F2f2;
     min-width: 600px;
-
+    max-height: auto;
   }
 }
