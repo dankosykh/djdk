@@ -8,15 +8,14 @@ This is my personal DJ website project to assist with outreach, present my mixes
 
 ## Technologies Used
 
+- Next.js
 - React
 - Node
 - Express
 - Axios
-- Styled-Components
 - Mongo
 - Mongoose
 - AWS (EC2)
-- Webpack
 
 ## Launch
 
